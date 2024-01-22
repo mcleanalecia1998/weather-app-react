@@ -16,20 +16,20 @@ export default function Weather(props) {
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
-      iconUrl:
-        "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-night.png",
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       description: response.data.weather[0].description,
     });
   }
   function handleSubmit(event) {
     event.preventDefault();
+    search();
   }
   function handleCityChange(event) {
     setCity(event.target.value);
   }
 
   function search() {
-    let units = `metric`;
+    let units = `imperial`;
     let apiKey = `af2a32a0cac5cf8a4097b72fe7238e46`;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
     axios.get(apiUrl).then(handleResponse);
@@ -50,7 +50,7 @@ export default function Weather(props) {
                 onChange={handleCityChange}
               />
             </div>
-            <div>
+            <div className="col-3">
               <input className="btn btn-primary" type="submit" value="Search" />
             </div>
           </div>

@@ -24,14 +24,14 @@ export default function WeatherDetails(props) {
               <span className="temperature">
                 {Math.round(props.data.temperature)}
               </span>
-              <span className="unit">⁰C </span>
+              <span className="unit">⁰F </span>
             </div>
           </div>
         </div>
         <div className="col-6">
           <ul>
             <li>
-              Feels like: <strong> {Math.round(props.data.feels)}</strong>{" "}
+              Feels like: <strong> {Math.round(props.data.feels)}⁰F</strong>{" "}
             </li>
             <li>
               Humidity: <strong> {props.data.humidity}%</strong>
