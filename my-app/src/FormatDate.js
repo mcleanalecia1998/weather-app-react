@@ -1,6 +1,20 @@
 import React from "react";
 
 export default function FormatDate(props) {
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
   let days = [
     "Sunday",
     "Monday",
@@ -11,6 +25,8 @@ export default function FormatDate(props) {
     "Saturday",
   ];
 
+  let month = months[props.date.getMonth()];
+  let date = props.date.getDate();
   let day = days[props.date.getDay()];
   let hours = props.date.getHours();
   if (hours < 10) {
@@ -26,6 +42,7 @@ export default function FormatDate(props) {
 
   return (
     <div>
+      {month} {date} <br />
       {day} {hours}:{minutes}
       {amOrPm}
     </div>
