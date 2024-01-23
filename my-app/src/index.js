@@ -9,7 +9,7 @@ root.render(
   <React.StrictMode>
     <div className="Index">
       <div className="container">
-        <h1>Weather App</h1>
+        <h1 className="text-center">Weather App</h1>
         <App />
       </div>
     </div>
