@@ -1,0 +1,9 @@
+.Forecast {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.Forecast-min-temp {
+  margin-left: 5px;
+  opacity: 0.6;
+}
