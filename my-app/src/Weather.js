@@ -19,7 +19,7 @@ export default function Weather(props) {
       wind: response.data.wind.speed,
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
-      code: response.data.weather.icon,
+      coordinate: response.data.coord,
     });
   }
   function handleSubmit(event) {
@@ -58,7 +58,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherDetails data={weatherData} />
-        <Forecast />
+        <Forecast coordinate={weatherData.coordinate} />
       </div>
     );
   } else {
