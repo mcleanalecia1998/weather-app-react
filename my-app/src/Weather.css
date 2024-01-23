@@ -1,6 +1,13 @@
+:root {
+  --primary-color: #e4c6cc;
+  --secondary-color: #713f40;
+  --teritary-color: #f7f3ff;
+  --fourth-color: #fce1e6;
+}
+
 .Weather {
   font-family: arial, sans-serif;
-  background-color: #f7f3ff;
+  background-color: var(--fourth-color);
   border: 1px solid #dadde1;
   padding: 16px;
   max-width: 600px;
@@ -9,7 +16,7 @@
 }
 
 .Weather .btn {
-  background-color: lightpink;
+  background-color: #713f40;
   border: 1px solid white;
 }
 
@@ -60,10 +67,9 @@
   position: relative;
   top: -32px;
   line-height: 1;
-  margin-left: 5px;
 }
 
 .Weather strong {
-  color: lightpink;
+  color: var(--secondary-color);
   font-weight: bold;
 }

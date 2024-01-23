@@ -4,7 +4,8 @@
 }
 
 .App footer {
-  font-size: 11px;
+  font-size: 12px;
+  text-align: center;
   margin: 10px 0;
 }
 .App a {

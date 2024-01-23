@@ -13,7 +13,7 @@ code {
 }
 .container {
   background-color: white;
-  max-width: 400px;
+  max-width: 600px;
   border-radius: 8px;
 }
 
@@ -25,8 +25,7 @@ code {
   padding: 200px 0;
 }
 .Index h1 {
-  color: brown;
-
+  color: #713f40;
   text-align: center;
   margin-top: 10px;
 }
