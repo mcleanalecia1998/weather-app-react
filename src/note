@@ -1,1 +1,77 @@
 https://api.openweathermap.org/data/3.0/onecall?lat=47&lon=75&appid=af2a32a0cac5cf8a4097b72fe7238e46
+
+
+if (unit === "celsius") {
+return (
+<div className="WeatherTemperature">
+    <span className="temperature">{Math.round(props.celsius)}</span>
+    <span className="unit">
+        ⁰C |{" "}
+        <a href="/" onClick={covertToFahrenheit}>
+            ⁰F
+        </a>{" "}
+    </span>{" "}
+</div>
+);
+} else {
+return (
+<div className="WeatherTemperature">
+    <span className="temperature">
+        {Math.round((props.celsius * 9) / 5 + 32)}
+    </span>
+    <span className="unit">
+        <a href="/" onClick={covertToCelsius}>
+            ⁰C{" "}
+        </a>
+        | ⁰F{" "}
+    </span>{" "}
+</div>
+
+
+
+
+import React, { useState } from "react";
+
+export default function WeatherTemperature(props) {
+const [unit, setUnit] = useState("fahrenheit");
+
+function convertToCelsius(event) {
+event.preventDefault();
+setUnit("celsius");
+}
+
+function convertToFahrenheit(event) {
+event.preventDefault();
+setUnit("fahrenheit");
+}
+
+function celsius() {
+return (props.fahrenheit - 32) / 1.8;
+}
+
+if (unit === "fahrenheit") {
+return (
+<div className="WeatherTemperature">
+    <span className="temperature">{Math.round(props.fahrenheit)}</span>
+    <span className="unit">
+        <a href="/" onClick={convertToCelsius}>
+            ⁰C
+        </a>{" "}
+        | ⁰F{" "}
+    </span>{" "}
+</div>
+);
+} else {
+return (
+<div className="WeatherTemperature">
+    <span className="temperature">{Math.round(celsius())}</span>
+    <span className="unit">
+        ⁰C |{" "}
+        <a href="/" onClick={convertToFahrenheit}>
+            ⁰F
+        </a>{" "}
+    </span>{" "}
+</div>
+);
+}
+}
