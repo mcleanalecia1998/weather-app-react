@@ -13,7 +13,7 @@ code {
 }
 .container {
   background-color: white;
-  width: 600px;
+  width: 400px;
   padding: 10px;
   border-radius: 8px;
 }
@@ -23,7 +23,7 @@ code {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 200px 0;
+  padding: 120px 0;
 }
 .Index h1 {
   color: #713f40;
