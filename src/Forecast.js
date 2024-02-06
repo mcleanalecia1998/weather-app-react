@@ -12,6 +12,10 @@ export default function Forecast(props) {
     setLoaded(false);
   }, [props.coordinates]);
 
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.unit]);
+
   function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
@@ -38,6 +42,7 @@ export default function Forecast(props) {
                 </div>
               );
             }
+            return null;
           })}
         </div>
       </div>
