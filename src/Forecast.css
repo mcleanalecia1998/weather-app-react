@@ -1,9 +1,14 @@
-.Forecast {
+.forecast {
   text-align: center;
   margin-top: 10px;
 }
 
-.Forecast-min-temp {
+.forecast-min-temp {
   margin-left: 5px;
   opacity: 0.6;
+}
+
+.forecast-day {
+  margin-top: 20px;
+  margin-left: 15px;
 }

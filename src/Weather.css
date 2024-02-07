@@ -23,7 +23,7 @@
 .Weather h1 {
   color: #878787;
   font-size: 30px;
-
+  text-align: center;
   font-weight: 100;
   margin: 20px 0 10px 0;
   line-height: 28.8px;
